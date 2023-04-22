@@ -9,7 +9,7 @@ Although most machines are fully digital nowadays, many still include skeuomorph
 3. If 3-of-a-kind line up horizontally, the player wins!
  
 ## Wireframe & Visuals:
-![screenshot](image.jpg)
+![screenshot](imgs/mockup.png)
 
 **UI/Theme:** Cute/vibrant pixel art in a darkened room
 
