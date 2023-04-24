@@ -3,5 +3,75 @@
 }
 
 body {
-    background-color: #1d2b53
+    background-color: #1d2b53;
+    display: grid;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 0px;
+    background-color: #1d2b53;
+  background-image: url("../imgs/machineup.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.screen {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  /* border-width: 10px; */
+  /* border-style: solid;
+  border-color: aqua; */
+  justify-content: center;
+  text-align: center;
+  color: white;
+  width: 800px;
+  height: 392px;
+  padding: 0;
+}
+
+.wheel {
+    display: flex;
+    padding: 0px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 208px;
+    margin-bottom: 0px;
+    width: 100px;
+    height: 164px;
+}
+
+.results{
+    display: flex;
+    margin: auto;
+color: white;
+width: 308px;
+height: 80px;
+background-color: pink;
+background-image: url(../imgs/mresult.png);
+background-repeat: no-repeat;
+background-position: center top;
+}
+
+#fruit1{
+    background-image: url(../imgs/banana.png)
+}
+
+#fruit2{
+    background-image: url(../imgs/peach.png)
+}
+
+#fruit3{
+    background-image: url(../imgs/melon.png)
+}
+
+.results>div{
+    display: flex;
+    width: 212px;
+    height: 68px;
+    text-align: center;
+    margin: auto;
+    /* border-width: 10px;
+    border-color: red;
+    border-style: solid; */
 }
