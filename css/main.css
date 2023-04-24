@@ -9,60 +9,43 @@ body {
     margin: 0;
     padding: 0;
     gap: 0px;
+    color: white;
+    font-family: 'VT323', sans-serif;
     background-color: #1d2b53;
-  background-image: url("../imgs/machineup.png");
-  background-repeat: no-repeat;
-  background-position: center top;
+    background-image: url("../imgs/machineup.png");
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 .screen {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  /* border-width: 10px; */
-  /* border-style: solid;
-  border-color: aqua; */
-  justify-content: center;
-  text-align: center;
-  color: white;
-  width: 800px;
-  height: 392px;
-  padding: 0;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    width: auto;
+    height: 294px;
+    padding: 0;
 }
 
 .wheel {
     display: flex;
-    padding: 0px;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-top: 208px;
+    margin-top: 156px;
     margin-bottom: 0px;
-    width: 100px;
-    height: 164px;
+    width: 75px;
+    height: 123px;
 }
 
 .results{
     display: flex;
     margin: auto;
-color: white;
-width: 308px;
-height: 80px;
-background-color: pink;
-background-image: url(../imgs/mresult.png);
-background-repeat: no-repeat;
-background-position: center top;
-}
-
-#fruit1{
-    background-image: url(../imgs/banana.png)
-}
-
-#fruit2{
-    background-image: url(../imgs/peach.png)
-}
-
-#fruit3{
-    background-image: url(../imgs/melon.png)
+    color: white;
+    width: 231px;
+    height: 60px;
+    background-image: url(../imgs/mresult.png);
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 .results>div{
@@ -71,7 +54,60 @@ background-position: center top;
     height: 68px;
     text-align: center;
     margin: auto;
+    margin-top: 10px;
     /* border-width: 10px;
     border-color: red;
     border-style: solid; */
+}
+
+.betting{
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+    margin: auto;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+#bet{
+    grid-column: 1 / span 3;
+}
+#left{    
+    justify-content: center;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+#right{    
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#centre{    
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#fruit1{
+    margin-left: auto;
+    margin-right: 9px;
+    background-image: url(../imgs/banana.png)
+}
+
+#fruit2{
+    margin-left: 9px;
+    margin-right: 9px;
+    background-image: url(../imgs/peach.png)
+}
+
+#fruit3{
+    
+    margin-left: 9px;
+    margin-right: auto;
+    background-image: url(../imgs/melon.png)
+}
+
+.money{
+    position: absolute;
+    right: 0px;
+    text-align: right;
 }

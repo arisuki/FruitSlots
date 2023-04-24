@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <title>Sweet Slots</title>
 </head>
 <body>
@@ -15,13 +18,14 @@
         <div class ="wheel" id="fruit3"></div>       
     </section>
  <section class="results">
-    <div>Pull the lever to start your gambling journey!</div>
+    <div id="msg">Pull the lever to start your gambling journey!</div>
  </section>
     <section class="betting">
-        <div id="left"></div>
-        <div id="centre"></div>
-        <div id="right"></div>
+        <div id="bet"><img src="imgs/bet.png"></div>
+        <div id="left"><img src="imgs/betdown.png"></div>
+        <div id="centre">$ 10</div>
+        <div id="right"><img src="imgs/betup.png"></div>
     </section>
-    
+    <section class="money">Total Winnings:<h3>$200</h3></section>
 </body>
 </html>
