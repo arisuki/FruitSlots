@@ -90,20 +90,20 @@ body {
 #fruit1{
     margin-left: auto;
     margin-right: 9px;
-    background-image: url(../imgs/banana.png)
+    /* background-image: url(../imgs/banana.png) */
 }
 
 #fruit2{
     margin-left: 9px;
     margin-right: 9px;
-    background-image: url(../imgs/peach.png)
+    /* background-image: url(../imgs/peach.png) */
 }
 
 #fruit3{
     
     margin-left: 9px;
     margin-right: auto;
-    background-image: url(../imgs/melon.png)
+    /* background-image: url(../imgs/melon.png) */
 }
 
 .money{
