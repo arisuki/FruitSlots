@@ -1,6 +1,6 @@
-# 🍑🍒Fruit Slots🍎🍊
+# 🍑🍒Sweet Slots🍎🍊
 
-## What is Fruit Slots?
+## What is Sweet Slots?
 Legend has it that the first slot machine originated in 1894's San Francisco. An early version of the slot machine displayed fruits on the reels, each representing a different flavour of gum that would be dispensed by the win, giving rise to the name "Fruit machine". 
 
 Although most machines are fully digital nowadays, many still include skeuomorphic elements such as a lever handle to pull or spinning slot visuals. Slot machines are the most popular way to gamble in the United States, despite having the lowest odds of any casino game. Perhaps this is due to its perceived simplicity as a game of luck rather than skill. To play, one must:
@@ -48,7 +48,7 @@ Open the game in a browser
 - I want to use a button to increase or decrease bet rather than preset bet amounts
 - I want to hear sound effects when the wheel spins
 - I want background music so I feel like I'm in a real casino
-- I want different slot machines with different minimum bet amounts and different odds
+- I want different slot machines with different minimum bet amounts and different odds  
 - I want to see a "spinning" animation 
 - I want the handle to move down when I click it and move up when I let go
 - I want there to be a delay between each image appearing e.g., "1.png... 2.png ... 3.png" 
@@ -108,7 +108,7 @@ Open the game in a browser
     10.2) updates current bet increase/decrease  
     10.3) updates images on the fruit machine  
     10.4) updates current amount of money  
-    10.5) updates text to declare a winner/loser 
+    10.5) updates text to declare a winner/loser  
     ****) a second of delay between each slot reveal  
     ****) spinning animation plays between spins  
     ****) handle moves down when clicked and goes up when let go of  
