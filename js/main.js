@@ -3,12 +3,12 @@ const fruits={
     cherry: {
         name: "cherry",
         image: "url('imgs/cherry.png')",
-        odds: 100,
+        odds: 50,
     },
     apple: {
         name: "apple",
         image: "url('imgs/apple.png')",
-        odds: 250,
+        odds: 75,
     },
     melon: {
         name: "melon",
@@ -23,13 +23,24 @@ const fruits={
     banana: {
         name: "banana",
         image: "url('imgs/banana.png')",
-        odds: 1500,
+        odds: 4000,
     },
     peach: {
         name: "peach",
         image: "url('imgs/peach.png')",
-        odds: 2000,
-    }
+        odds: 5000,
+    },
+    doublecherry: {
+        name: "double cherry",
+        image: "url('imgs/cherry.png')",
+        odds: 15
+    },
+
+    singlecherry: {
+        name: "single cherry",
+        image: "url('imgs/cherry.png')",
+        odds: 3,
+    },
 }
 
 const arrayWheel= [
