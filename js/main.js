@@ -67,7 +67,7 @@ const resultMessage=document.getElementById("msg")
 const betDown=document.getElementById("left")
 const betUp=document.getElementById("right")
 const betScreen=document.getElementById("centre")
-const playButton=document.getElementById("bet")
+const playButton=document.getElementById("handle")
 const moneyScreen=document.getElementById("currentMoney")
 const fruit1=document.getElementById("fruit1")
 const fruit2=document.getElementById("fruit2")
@@ -184,18 +184,13 @@ function checkWinner(){
             resultMessage.innerText=`You win $ ${winAmount}`
             }, 3000)
     }
- 
-}
-
-function messageUpdate(){
-    // if 
-    // return
 }
 
 function animateSpin(){
     f1.src="imgs/spinning.gif"
     f2.src="imgs/spinning.gif"
     f3.src="imgs/spinning.gif"
+    resultMessage.innerText=`-s p i n n i n g-`
 
     setTimeout(() => {
     f1.src="imgs/blank.gif"
