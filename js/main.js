@@ -78,7 +78,8 @@ const f3=document.getElementById("f3")
 
 
   /*----- event listeners -----*/
-playButton.addEventListener('click', spinTheWheel)
+playButton.addEventListener('mousedown', changeHandle)
+playButton.addEventListener('mouseup', spinTheWheel)
 betUp.addEventListener('click', betIncreases)
 betDown.addEventListener('click', betDecreases)
 
@@ -94,8 +95,18 @@ function init(){
     renderGame()
 }
 
+function changeHandle(){
+    handle.src="imgs/handledown.gif"
+}
+
 //spins 3 different times, checks winner, calls render 
 function spinTheWheel(){
+    handle.src="imgs/handleup.gif"
+    //disables clicking
+    playButton.removeEventListener('mouseup', spinTheWheel)
+    playButton.removeEventListener('mousedown', changeHandle)
+
+
     if (playerMoney > 0){
         console.log("wheel is spinning")
         currentReels=[spinning(), spinning(), spinning()]
@@ -108,6 +119,13 @@ function spinTheWheel(){
     
     animateSpin()
     renderGame()
+    
+    //brings back clicking
+    setTimeout(() => {
+        playButton.addEventListener('mousedown', changeHandle)
+        playButton.addEventListener('mouseup', spinTheWheel)
+        }, 3000)
+   
 }
 
 //spins 3x in spinTheWheel
@@ -201,6 +219,5 @@ function animateSpin(){
     setTimeout(() => {
     f3.src="imgs/blank.gif"
     }, 3000)
-
-
 }
+
