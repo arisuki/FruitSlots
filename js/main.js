@@ -33,13 +33,13 @@ const fruits={
     doublecherry: {
         name: "double cherry",
         image: "url('imgs/cherry.png')",
-        odds: 15
+        odds: 5
     },
 
     singlecherry: {
         name: "single cherry",
         image: "url('imgs/cherry.png')",
-        odds: 3,
+        odds: 2,
     },
 }
 
@@ -72,7 +72,9 @@ const moneyScreen=document.getElementById("currentMoney")
 const fruit1=document.getElementById("fruit1")
 const fruit2=document.getElementById("fruit2")
 const fruit3=document.getElementById("fruit3")
-
+const f1=document.getElementById("f1")
+const f2=document.getElementById("f2")
+const f3=document.getElementById("f3")
 
 
   /*----- event listeners -----*/
@@ -104,6 +106,7 @@ function spinTheWheel(){
     // reel2=currentReels[1]
     // reel3=currentReels[2]
     
+    animateSpin()
     renderGame()
 }
 
@@ -137,10 +140,6 @@ function betIncreases(){
 function renderGame(){
     betScreen.innerHTML=`$ ${playerBet}`
     moneyScreen.innerHTML=`$ ${playerMoney}`
-    // fruit1.style.backgroundImage = fruits.peach.image
-    // fruit2.style.backgroundImage = fruits.peach.image
-    // fruit3.style.backgroundImage = fruits.peach.image
-
     fruit1.style.backgroundImage = fruits[currentReels[0]].image
     fruit2.style.backgroundImage = fruits[currentReels[1]].image
     fruit3.style.backgroundImage = fruits[currentReels[2]].image
@@ -149,21 +148,64 @@ function renderGame(){
 
 //checks for a winner & pays out, or if loser, subtracts out
 function checkWinner(){
+    let winAmount
+
     if (currentReels[0]==currentReels[1] && currentReels[1]==currentReels[2]){
-        playerMoney=playerMoney+(playerBet*(fruits[currentReels[0]].odds))
-        winningRound=true;
+        winAmount=playerBet*(fruits[currentReels[0]].odds)
+        playerMoney+=winAmount
+        winningRound=true
     }
+// check for 1 or 2 cherries
+    else if(currentReels[0]=="cherry" && currentReels[1]=="cherry"){
+        winAmount=playerBet*(fruits.doublecherry.odds)
+        playerMoney+=winAmount
+        winningRound=true
+    }
+    else if(currentReels[0]=="cherry"){
+        winAmount=playerBet*(fruits.singlecherry.odds)
+        playerMoney+=winAmount
+        winningRound=true
+    }
+// lose
     else{
         playerMoney-=playerBet
+        setTimeout(() => {
+            resultMessage.innerText=`You lose $ ${playerBet}`
+            }, 3000)
         winningRound=false;
 // adjusts bet so you don't go into negatives
         if (playerBet>playerMoney){
             playerBet=playerMoney
         }
+//prints winning message
     }
-    console.log("Is there a winner?: ", winningRound)
+    if (winningRound===true){
+        setTimeout(() => {
+            resultMessage.innerText=`You win $ ${winAmount}`
+            }, 3000)
     }
+ 
+}
 
 function messageUpdate(){
-    return
+    // if 
+    // return
+}
+
+function animateSpin(){
+    f1.src="imgs/spinning.gif"
+    f2.src="imgs/spinning.gif"
+    f3.src="imgs/spinning.gif"
+
+    setTimeout(() => {
+    f1.src="imgs/blank.gif"
+    }, 1000)
+    setTimeout(() => {
+    f2.src="imgs/blank.gif"
+    }, 2000)
+    setTimeout(() => {
+    f3.src="imgs/blank.gif"
+    }, 3000)
+
+
 }

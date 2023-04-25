@@ -53,11 +53,9 @@ body {
     width: 212px;
     height: 68px;
     text-align: center;
+    justify-content: center;
     margin: auto;
     margin-top: 10px;
-    /* border-width: 10px;
-    border-color: red;
-    border-style: solid; */
 }
 
 .betting{
