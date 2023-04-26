@@ -17,6 +17,10 @@ Although most machines are fully digital nowadays, many still include skeuomorph
 
 **Font:** [VT323](https://fonts.google.com/specimen/VT323)
 
+**Music:** [Cool Vibes](https://incompetech.com) by Kevin MacLeod    
+Licensed under Creative Commons: By Attribution 4.0 License  
+http://creativecommons.org/licenses/by/4.0/
+
 ## Technologies used: 
 - HTML 
 - CSS 
