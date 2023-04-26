@@ -101,6 +101,12 @@ body {
   margin-top: 70px;
 }
 
+.music {
+  position: relative;
+  margin: auto;
+  margin-top: 10px;
+}
+
 .betting {
   position: absolute;
   right: 20px;

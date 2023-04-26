@@ -62,6 +62,11 @@ const arrayWheel = [
   "peach",
 ];
 
+const soundBGM = new Audio("sounds/bgm.mp3");
+const soundWin = new Audio("sounds/win.wav");
+const soundLose = new Audio("sounds/lose.wav");
+const soundSpin = new Audio("sounds/spin.wav");
+let isPlaying = false;
 /*----- state variables -----*/
 
 let playerMoney;
@@ -79,6 +84,7 @@ const betUp = document.getElementById("right");
 const betScreen = document.getElementById("centre");
 const playButton = document.getElementById("handle");
 const moneyScreen = document.getElementById("currentMoney");
+const musicButton = document.getElementById("musicButton");
 const fruit1 = document.getElementById("fruit1");
 const fruit2 = document.getElementById("fruit2");
 const fruit3 = document.getElementById("fruit3");
@@ -91,6 +97,7 @@ playButton.addEventListener("mousedown", changeHandle);
 playButton.addEventListener("mouseup", spinTheWheel);
 betUp.addEventListener("click", betIncreases);
 betDown.addEventListener("click", betDecreases);
+musicButton.addEventListener("click", musicPlayer);
 
 /*----- functions -----*/
 
@@ -185,6 +192,7 @@ function checkWinner() {
   else {
     setTimeout(() => {
       resultMessage.innerText = `You lose $ ${playerBet}`;
+      soundLose.play();
       // adjusts bet so you don't go into negatives
       if (playerBet > playerMoney) {
         playerBet = playerMoney;
@@ -198,6 +206,7 @@ function checkWinner() {
     setTimeout(() => {
       resultMessage.innerText = `You win $ ${winAmount}`;
       playerMoney += winAmount;
+      soundWin.play();
       renderGame();
     }, 3000);
   }
@@ -207,6 +216,7 @@ function animateSpin() {
   f1.src = "imgs/spinning.gif";
   f2.src = "imgs/spinning.gif";
   f3.src = "imgs/spinning.gif";
+  soundSpin.play();
   resultMessage.innerText = `-s p i n n i n g-`;
 
   setTimeout(() => {
@@ -218,4 +228,16 @@ function animateSpin() {
   setTimeout(() => {
     f3.src = "imgs/blank.gif";
   }, 3000);
+}
+
+//plays BGM if it is not already playing, pauses otherwise
+function musicPlayer() {
+  if (isPlaying === false) {
+    soundBGM.play();
+    soundBGM.loop = true;
+    isPlaying = true;
+  } else {
+    soundBGM.pause();
+    isPlaying = false;
+  }
 }
