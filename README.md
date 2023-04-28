@@ -11,6 +11,11 @@ To play, one must:
 3. If any listed combinations line up horizontally, the player wins!
 
 ## Screenshots
+### Basic game loop:
+![game loop](imgs/SweetSlotsDemo.gif)
+
+### Spinning:
+![spinning](imgs/spinning.png)
 
 ## Technologies used: 
 - HTML 
@@ -27,9 +32,9 @@ To play, one must:
 
 ## Getting Started
 
-[Click to playk Sweet Slots!](https://arisuki.github.io/SweetSlots/)
+[Click to play Sweet Slots!](https://arisuki.github.io/SweetSlots/)
 
-#### Sweet Slots is a game of chance and simple to play:  
+### Sweet Slots is a game of chance and simple to play:  
 - adjust your bet higher or lower in the betting window  
 - toggle the music on and off with the music play button  
 - click and release the handle to begin spinning the slot machine  
@@ -41,3 +46,5 @@ To play, one must:
 - create a virtual casino with multiple slot machines to choose from, each with different minimum and maximum betting amounts
 - mobile-friendly adaptation
 - keep track of a player's money using cookies
+- move layout around to have betting and money panels closer to the centre
+- list possible winning combinations

@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="js/main.js"></script>
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
-      rel="stylesheet"
-    />
-    <title>Sweet Slots</title>
-  </head>
-  <body>
-    <section class="bgoverlay">
-      <section class="machine">
-        <section class="screen">
-          <div class="wheel" id="fruit1">
-            <img id="f1" src="imgs/blank.gif" />
-          </div>
-          <div class="wheel" id="fruit2">
-            <img id="f2" src="imgs/blank.gif" />
-          </div>
-          <div class="wheel" id="fruit3">
-            <img id="f3" src="imgs/blank.gif" />
-          </div>
-          <div class="handle"><img id="handle" src="imgs/handleup.gif" /></div>
-        </section>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script defer src="js/main.js"></script>
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+            rel="stylesheet"
+        />
+        <title>Sweet Slots</title>
+    </head>
+    <body>
+        <section class="bgoverlay">
+            <section class="machine">
+                <section class="screen">
+                    <div class="wheel" id="fruit1">
+                        <img id="f1" src="imgs/blank.gif" />
+                    </div>
+                    <div class="wheel" id="fruit2">
+                        <img id="f2" src="imgs/blank.gif" />
+                    </div>
+                    <div class="wheel" id="fruit3">
+                        <img id="f3" src="imgs/blank.gif" />
+                    </div>
+                    <div class="handle">
+                        <img id="handle" src="imgs/handleup.gif" />
+                    </div>
+                </section>
+                <section class="results">
+                    <div id="msg">
+                        Pull the lever to start your gambling journey!
+                    </div>
+                </section>
 
-        <section class="results">
-          <div id="msg">Pull the lever to start your gambling journey!</div>
-        </section>
+                <section class="betting">
+                    <div id="left"><img src="imgs/betdown.png" /></div>
+                    <div id="centre"></div>
+                    <div id="right"><img src="imgs/betup.png" /></div>
+                </section>
 
-        <section class="betting">
-          <div id="left"><img src="imgs/betdown.png" /></div>
-          <div id="centre"></div>
-          <div id="right"><img src="imgs/betup.png" /></div>
-        </section>
+                <section class="money">
+                    <h3 id="currentMoney"></h3>
+                </section>
 
-        <section class="money">
-          <h3 id="currentMoney"></h3>
+                <section class="music">
+                    <div id="musicButton">
+                        <img src="imgs/soundButton.png" />
+                    </div>
+                </section>
+            </section>
         </section>
-        <section class="music">
-          <div id="musicButton"><img src="imgs/soundButton.png"></div>
-        </section>
-      </section>
-    </section>
-  </body>
+    </body>
 </html>
